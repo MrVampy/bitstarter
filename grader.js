@@ -98,7 +98,7 @@ if(require.main == module) {
 	request.end(); 
     } else {
 	var output = checkJsonAndPrint(fs.readFileSync(program.file), program.checks);
-	consolge.log(output);
+	console.log(output);
     }
 
       

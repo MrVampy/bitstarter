@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+var fs = require('fs');
+
+function get_line(filename, callback) {
+    var data = fs.readFileSync(filename, 'utf8');
+    var lines = data.split("\n");
+
+    callback(null, lines);
+}
+
+get_line('./checklist', function(err, lines){
+  console.log(lines);
+})
